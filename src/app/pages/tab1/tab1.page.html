@@ -8,10 +8,13 @@
 
 <ion-content color="dark">
     <ion-list color="dark">
-      <ion-item color="dark" *ngFor="let list of deseosService.lists">
+      <ion-item color="dark" 
+                *ngFor="let list of deseosService.lists"
+                (click)="listSelected( list )">
         <ion-label>
           {{list.title}}
         </ion-label>
+        <ion-note slot="end" color="tertiary"> {{ list.items.length }} itmes </ion-note>
       </ion-item>
     </ion-list>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
