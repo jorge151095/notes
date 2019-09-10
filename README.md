@@ -1,4 +1,4 @@
-# Notes
+# Notes app
 
 ## Description
 App for create notes, reminders, order your daily activitis. The app is created in ionic framework for mobile devices.
