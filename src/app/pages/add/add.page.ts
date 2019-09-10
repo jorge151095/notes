@@ -47,4 +47,9 @@ export class AddPage implements OnInit {
     }
     this.desiresServives.saveStorage();
   }
+
+  delete( i: number ) {
+    this.list.items.splice( i, 1);
+    this.desiresServives.saveStorage();
+  }
 }
