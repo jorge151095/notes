@@ -35,12 +35,11 @@ export class Tab1Page {
           if (data.title.length === 0) {
             return;
           }
-          this.deseosService.createList(data.title);
+          const listId = this.deseosService.createList(data.title);
+          this.router.navigateByUrl(`/tabs/tab1/add/${listId}`);
         }
       }]
     });
-
     alert.present();
-    //this.router.navigateByUrl('/tabs/tab1/add');
   }
 }
