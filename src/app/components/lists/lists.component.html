@@ -1,3 +1,21 @@
-<p>
-  lists works!
-</p>
+<ion-list color="dark">
+  <ion-item-sliding *ngFor="let list of deseosService.lists | filterCompleted:finished"> 
+    <ion-item color="dark" (click)="listSelected( list )">
+      <ion-label>
+        {{list.title}}
+      </ion-label>
+      <ion-note slot="end" color="tertiary"> {{ list.items.length }} itmes </ion-note>
+    </ion-item>
+    <ion-item-options>
+      <ion-item-option (click)="deleteList(list)"
+                       color="danger">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+    <ion-item-options side="start">
+      <ion-item-option (click)="editLabelName(list)">
+        <ion-icon name="create" slot="icon-only"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>

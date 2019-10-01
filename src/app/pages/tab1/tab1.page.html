@@ -7,17 +7,7 @@
 </ion-header>
 
 <ion-content color="dark">
-    <app-lists></app-lists>
-    <ion-list color="dark">
-      <ion-item color="dark" 
-                *ngFor="let list of deseosService.lists"
-                (click)="listSelected( list )">
-        <ion-label>
-          {{list.title}}
-        </ion-label>
-        <ion-note slot="end" color="tertiary"> {{ list.items.length }} itmes </ion-note>
-      </ion-item>
-    </ion-list>
+    <app-lists [finished]="false"></app-lists>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button>
         <ion-icon (click)="addList()"name="add"></ion-icon>
