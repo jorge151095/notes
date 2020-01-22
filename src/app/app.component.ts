@@ -18,6 +18,11 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  /**
+   * Init App
+   *
+   * @memberof AppComponent
+   */
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
